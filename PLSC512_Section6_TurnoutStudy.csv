@@ -1,0 +1,61 @@
+ID,Voted,Canvassed,Assignment,Locality,Household
+1,1,1,1,East Rock,1
+2,1,1,1,East Rock,1
+3,0,0,0,East Rock,2
+4,0,0,0,East Rock,2
+5,1,0,0,East Rock,2
+6,1,0,0,East Rock,3
+7,1,0,0,East Rock,3
+8,0,0,0,East Rock,3
+9,0,0,0,East Rock,4
+10,0,0,0,East Rock,4
+11,1,0,0,East Rock,5
+12,0,0,0,East Rock,5
+13,0,0,0,East Rock,6
+14,0,0,0,East Rock,6
+15,1,0,0,East Rock,7
+16,1,0,0,East Rock,7
+17,0,0,1,East Rock,8
+18,0,0,1,East Rock,8
+19,0,1,1,East Rock,9
+20,0,1,1,East Rock,9
+21,1,1,1,East Rock,9
+22,1,0,1,East Rock,10
+23,1,0,1,East Rock,10
+24,1,0,1,East Rock,10
+25,0,1,1,Downtown,11
+26,1,1,1,Downtown,11
+27,0,1,1,Downtown,12
+28,1,1,1,Downtown,12
+29,0,1,1,Downtown,12
+30,1,1,1,Downtown,13
+31,1,1,1,Downtown,13
+32,1,0,0,Downtown,14
+33,1,0,0,Downtown,14
+34,1,0,0,Downtown,15
+35,1,0,0,Downtown,15
+36,1,0,0,Downtown,15
+37,1,0,0,Downtown,15
+38,0,0,1,Downtown,16
+39,0,0,1,Downtown,16
+40,1,1,1,Downtown,17
+41,1,1,1,Downtown,17
+42,0,1,1,Downtown,18
+43,0,1,1,Downtown,18
+44,0,1,1,Downtown,18
+45,1,0,1,Downtown,19
+46,0,0,1,Downtown,19
+47,0,1,1,Downtown,20
+48,1,1,1,Downtown,20
+49,1,1,1,Downtown,20
+50,1,1,1,Brooklyn,21
+51,1,1,1,Brooklyn,21
+52,0,1,1,Brooklyn,22
+53,0,1,1,Brooklyn,22
+54,0,0,0,Brooklyn,23
+55,0,0,0,Brooklyn,23
+56,1,0,0,Brooklyn,24
+57,0,0,0,Brooklyn,24
+58,1,1,1,Brooklyn,25
+59,1,1,1,Brooklyn,25
+60,1,1,1,Brooklyn,25
