@@ -512,12 +512,46 @@ kable(milwaukee)</code></pre>
 <li><p>Conditioning on post-treatment variables, and showing that the estimate is biased.</p></li>
 </ol>
 <p><em>Example:</em> Say there is an outcome <span class="math inline">\(Y\)</span>, assignment vector <span class="math inline">\(Z\)</span> and binary covariate <span class="math inline">\(X\)</span>, that is measured post-treatment. How is the difference-in-means estimate conditional on <span class="math inline">\(X=1\)</span> potentially biased away from the ATE for the subgroup for whom <span class="math inline">\(X_i(1) = X_i(0) = 1\)</span>?</p>
-<p><em>Intuition:</em> Say we condition on the subgroup <span class="math inline">\(X_i(1) = X_i(0) = 1\)</span>, and compute the difference-in-means:</p>
-<p><span class="math inline">\(E[Y_i | Z_i=1, X_i(1) = 1] - E[Y_i | Z_i=0, X_i(0) = 1]\)</span></p>
-<p>We can re-write this as (where we add and subtract the quantity in blue):</p>
-<p><span class="math inline">\(E[Y_i | Z_i=1, X_i(1) = 1] - \color{blue}{E[Y_i | Z_i=0, X_i(1) = 1] + E[Y_i | Z_i=0, X_i(1) = 1]} - E[Y_i | Z_i=0, X_i(0) = 1]\)</span></p>
-<p>Now note that conditioning on the post-treatment value of <span class="math inline">\(X_i(1)=1\)</span> gives us the first part, which only equals the ATE estimate for the subgroup if the term in red equals zero:</p>
-<p><span class="math inline">\(E[Y_i | Z_i=1, X_i(1) = 1] - E[Y_i | Z_i=0, X_i(1) = 1] + \color{red}{E[Y_i | Z_i=0, X_i(1) = 1] - E[Y_i | Z_i=0, X_i(0) = 1]}\)</span></p>
+<p><em>Intuition:</em> Let there be four types of respondents:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">X(Z=0)</th>
+<th align="right">X(Z=1)</th>
+<th align="left">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">A</td>
+</tr>
+<tr class="even">
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="left">B</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="left">C</td>
+</tr>
+<tr class="even">
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left">D</td>
+</tr>
+</tbody>
+</table>
+<p>Call the subgroup that satisfy <span class="math inline">\(X_i(1) = X_i(0) = 1\)</span> Type “A”. Then the ATE for this subgroup is:</p>
+<p><span class="math inline">\(E[Y_i | Z=1, Type A]\pi_{A} - E[Y_i | Z=0, Type A]\pi_A\)</span></p>
+<p>However, when we condition on <span class="math inline">\(X_i=1\)</span>, we estimate</p>
+<p><span class="math inline">\(\color{blue}{E[Y_i | Z=1] = E[Y_i | Z=1, TypeA]\pi_A} + E[Y_i | Z=1, Type B]\pi_B\)</span></p>
+<p><span class="math inline">\(\color{blue}{E[Y_i | Z=0] = E[Y_i | Z=0, TypeA]\pi_A} + E[Y_i | Z=0, Type C]\pi_C\)</span></p>
+<p>And for the difference between these quantities (<span class="math inline">\(E[Y_i | Z=1]-E[Y_i | Z=0]\)</span>) to equal <span class="math inline">\(E[Y_i | Z=1, Type A]\pi_{A} - E[Y_i | Z=0, Type A]\pi_A\)</span>, it must be that:</p>
+<p><span class="math inline">\(\color{red}{E[Y_i | Z=1, Type B]\pi_B - E[Y_i | Z=0, Type C]\pi_C = 0}\)</span></p>
+<p>Which, apart from chance, there is no reason to expect.</p>
 <ol start="8" style="list-style-type: decimal">
 <li>How are “blocks” different from “clusters”? Is “covariate adjustment” the same thing as “blocking”?</li>
 </ol>
